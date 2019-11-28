@@ -146,6 +146,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-intellij-idea配置使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/">intellij idea配置使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2019-11-28T09:43:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
+</a>
+        
+      </header>
+    
+	<!-- 目录内容 -->
+	
+	<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git基本配置使用入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -169,57 +235,11 @@
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="一、git的常用基础命令"><a href="#一、git的常用基础命令" class="headerlink" title="一、git的常用基础命令"></a>一、git的常用基础命令</h1><pre><code>1、下载资源https://git-scm.com/downloads ，安装  “下一步” 即可;
+        <h1 id="一、git的常用基础命令"><a href="#一、git的常用基础命令" class="headerlink" title="一、git的常用基础命令"></a>一、git的常用基础命令</h1><pre><code>1、下载资源https://git-scm.com/downloads ，安装  “下一步” 即可;
 2、配置用户名及邮箱;</code></pre><p><img src="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git-00.png" alt="gitBase"><br>        安装完成后，打开gitBase:<br>           $git config –global user.name “自定义名字”<br>           $git config –global user.email “自定义邮箱”<br>    3、创建版本库：<br>        $git init</p>
-<!--more-->       
-<pre><code>4、新增文件：file.java
-    $git add file.java
-    $git commit -m &quot;自定义提交信息&quot;
-
-5、版本回退
-    $git log 查询操作日志
-    $git reset hard HEAD^ 从当前版本回退一个版本
-                    HEAD^^ 回退2个版本</code></pre><p><img src="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git-01.png" alt="git执行顺序"></p>
-<pre><code>7、修改工作区后恢复：$git checkout -- filename.txt
-   修改暂存区后恢复: $git reset HEAD filename.txt
-
-8、删除工作区文件
-  $git rm filename.txt
-  $git commit -m &quot;message context&quot;  
-==若不提交后面会有冲突！！！==</code></pre><hr>
-<h1 id="二、远程仓库配置"><a href="#二、远程仓库配置" class="headerlink" title="二、远程仓库配置"></a>二、远程仓库配置</h1><pre><code>1、生成信任账号
-         $ ssh-keygen -t rsa -C &quot;配置的邮箱&quot;
-    生成的账号会在ssh文件夹中</code></pre><p><img src="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git-02.jpg" alt="密钥"><br>        copy内容到github配置下<br><img src="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git-03.jpg" alt="github"></p>
-<pre><code>2、关联远程仓库
-    git remote add origin git@server-name:path/repo-name.git
-    path:指github上每一个具体仓库地址
-
-3、提交master分支下的所有文件到远程仓库
-     git  push -u origin master       &quot;-u&quot;是第一次推送时并将远程库关联
-
-4、将远程仓库的内容clone到本地
-    Git  clone git@server-name:path/repo-name.git</code></pre><hr>
-<h1 id="三、git分支相关"><a href="#三、git分支相关" class="headerlink" title="三、git分支相关"></a>三、git分支相关</h1><pre><code>1、新建分支
-Git  checkout -b dev    新建一个dev的分支，并切换到dev
-Git  branch dev 新建dev的分支
-Git  checkout dev 切换到dev分支下
-
-2、合并分支
-Git merge dev    将dev分支合并到当前分支下
-
-3、删除分支
-Git branch -d dev 删除已到缓存区的指定分支
-git branch -D &lt;name&gt; 删除分支
-
-4、查看分支
-Git branch</code></pre><hr>
-<h1 id="四、git相关注意事项"><a href="#四、git相关注意事项" class="headerlink" title="四、git相关注意事项"></a>四、git相关注意事项</h1><pre><code>• 查看远程库信息，使用git remote -v；
-• 本地新建的分支如果不推送到远程，对其他人就是不可见的；
-• 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
-• 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
-• 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
-• 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。</code></pre>
+        
+          <a class="article-more-a" href="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#more">more >></a>
+        
       
 
       
@@ -297,18 +317,9 @@ Git branch</code></pre><hr>
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
+          <a class="article-more-a" href="/2019/11/22/hello-world/#more">more >></a>
+        
       
 
       
