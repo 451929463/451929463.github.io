@@ -146,28 +146,90 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-git基本配置使用入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/test/">test</a>
+      <a class="article-title" href="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">git基本配置使用入门</a>
     </h1>
   
 
         
-        <a href="/2019/11/27/test/" class="archive-article-date">
-  	<time datetime="2019-11-27T14:35:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
+        <a href="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/" class="archive-article-date">
+  	<time datetime="2019-11-28T05:33:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
 </a>
         
       </header>
     
+	<!-- 目录内容 -->
+	
+	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2019/11/27/test/alipay.jpg" alt="test img"></p>
+        <a id="more"></a>
+<h1 id="一、git的常用基础命令"><a href="#一、git的常用基础命令" class="headerlink" title="一、git的常用基础命令"></a>一、git的常用基础命令</h1><pre><code>1、下载资源https://git-scm.com/downloads ，安装  “下一步” 即可;
+2、配置用户名及邮箱;
+    ![gitBase](git基本配置使用入门/git-00.png)
+    安装完成后，打开gitBase:
+       $git config --global user.name &quot;自定义名字&quot;
+       $git config --global user.email &quot;自定义邮箱&quot;
+3、创建版本库：
+    $git init
 
+4、新增文件：file.java
+    $git add file.java
+    $git commit -m &quot;自定义提交信息&quot;
+
+5、版本回退
+    $git log 查询操作日志
+    $git reset hard HEAD^ 从当前版本回退一个版本
+                    HEAD^^ 回退2个版本</code></pre><p><img src="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git-01.png" alt="git执行顺序"></p>
+<pre><code>7、修改工作区后恢复：$git checkout -- filename.txt
+   修改暂存区后恢复: $git reset HEAD filename.txt
+
+8、删除工作区文件
+  $git rm filename.txt
+  $git commit -m &quot;message context&quot;  
+==若不提交后面会有冲突！！！==</code></pre><hr>
+<h1 id="二、远程仓库配置"><a href="#二、远程仓库配置" class="headerlink" title="二、远程仓库配置"></a>二、远程仓库配置</h1><pre><code>1、生成信任账号
+         $ ssh-keygen -t rsa -C &quot;配置的邮箱&quot;
+    生成的账号会在ssh文件夹中
+    ![密钥](git基本配置使用入门/git-02.jpg)
+    copy内容到github配置下
+    ![github](git基本配置使用入门/git-03.jpg)
+
+2、关联远程仓库
+    git remote add origin git@server-name:path/repo-name.git
+    path:指github上每一个具体仓库地址
+
+3、提交master分支下的所有文件到远程仓库
+     git  push -u origin master       &quot;-u&quot;是第一次推送时并将远程库关联
+
+4、将远程仓库的内容clone到本地
+    Git  clone git@server-name:path/repo-name.git</code></pre><hr>
+<h1 id="三、git分支相关"><a href="#三、git分支相关" class="headerlink" title="三、git分支相关"></a>三、git分支相关</h1><pre><code>1、新建分支
+Git  checkout -b dev    新建一个dev的分支，并切换到dev
+Git  branch dev 新建dev的分支
+Git  checkout dev 切换到dev分支下
+
+2、合并分支
+Git merge dev    将dev分支合并到当前分支下
+
+3、删除分支
+Git branch -d dev 删除已到缓存区的指定分支
+git branch -D &lt;name&gt; 删除分支
+
+4、查看分支
+Git branch</code></pre><hr>
+<h1 id="四、git相关注意事项"><a href="#四、git相关注意事项" class="headerlink" title="四、git相关注意事项"></a>四、git相关注意事项</h1><pre><code>• 查看远程库信息，使用git remote -v；
+• 本地新建的分支如果不推送到远程，对其他人就是不可见的；
+• 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+• 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+• 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+• 从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。</code></pre>
       
 
       
@@ -175,203 +237,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">git配置、git入门使</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/test/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git快速使用入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/git%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">git快速使用入门</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/git%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  	<time datetime="2019-11-27T08:20:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>一、Git的安装、初始化<br>    1、安装  “下一步” 即可<br>    2、配置用户名  $git config –global user.name “name”<br>                  $git config –global user.email “email”<br>    3、创建版本库：<br>    $git init<br>    <img src="/2019/11/27/git%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/weichatpay.jpg" alt="注释吗？"><br>    <img src="/2019/11/27/git%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git.png" alt="注释吗1111111111111111111111？"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/git%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-微信开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/">微信开发</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/27/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/" class="archive-article-date">
-  	<time datetime="2019-11-27T08:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/27/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">git的简单配置</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2019-11-22T15:52:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一、git配置增删改查<br>    1、安装git并初始化</p>
-<hr>
-<p>标题二<br>    内容</p>
-<hr>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">展开全文 >></a>
         </p>
       
 
@@ -419,6 +300,9 @@
         
       </header>
     
+	<!-- 目录内容 -->
+	
+	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -567,6 +451,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">git配置、git入门使</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
