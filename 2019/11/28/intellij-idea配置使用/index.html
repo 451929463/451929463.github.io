@@ -45,7 +45,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8&#x2F;package-04.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8&#x2F;package-05.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8&#x2F;question-00.png">
-<meta property="og:updated_time" content="2019-11-28T15:00:00.432Z">
+<meta property="og:updated_time" content="2019-11-28T15:20:39.421Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8&#x2F;config-00.png">
   
@@ -235,12 +235,9 @@ JetBrains IntelliJ IDEA Ultimate 2018.1+注册文件 链接: https://pan.baidu.c
 <h1 id="六、Maven的web项目创建"><a href="#六、Maven的web项目创建" class="headerlink" title="六、Maven的web项目创建"></a>六、Maven的web项目创建</h1><p><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/maven-07.png" alt="maven-08"><br>    ***此时创建的maven-web项目，没有java编写目录和资源存放文件夹<br><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/maven-08.png" alt="maven-09"></p>
 <h1 id="七、intellij-IDEA打包项目"><a href="#七、intellij-IDEA打包项目" class="headerlink" title="七、intellij-IDEA打包项目"></a>七、intellij-IDEA打包项目</h1><pre><code>&lt;font color=&quot;#FF0000&quot;&gt;使用intellij-IDEA原生项目打包&lt;/font&gt;&lt;br /&gt;</code></pre><p><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/package-00.png" alt="package-01"><br><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/package-01.png" alt="package-02"><br><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/package-02.png" alt="package-03"><br><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/package-03.png" alt="package-04"><br><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/package-04.png" alt="package-05"></p>
 <h1 id="八、使用Maven打包项目"><a href="#八、使用Maven打包项目" class="headerlink" title="八、使用Maven打包项目"></a>八、使用Maven打包项目</h1><p><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/package-05.png" alt="package-06"></p>
-<h1 id="九、intellij-IDEA使用问题"><a href="#九、intellij-IDEA使用问题" class="headerlink" title="九、intellij-IDEA使用问题"></a>九、intellij-IDEA使用问题</h1><pre><code>1、intellij-IDEA创建web项目后，无法访问index.jsp</code></pre><p><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/question-00.png" alt="question-00"><br>    2、针对spring boot项目导入后没有application图标<br>    <font color="#FF0000">第一种方法</font><br>    检查看到没有target文件夹 不知道跟这个有没有关系，<br>    既然没有target文件夹，我就去看了下maven，<br>    结果在右侧Maven Projects没发现该项目，猜测可能是没检测到该项目<br>    在Maven Projects点击+号，选中该项目的pom,xml， 右下角出现检测，成功。</p>
-<pre><code>&lt;font color=&quot;#FF0000&quot;&gt;第二种方法&lt;/font&gt;
-在Maven Projects点击+号，选中该项目的pom,xml， 右下角出现检测，
-点击Build &gt;&gt; Rebulid Project
-生成了target目录和文件
-成功</code></pre>
+<h1 id="九、intellij-IDEA使用问题"><a href="#九、intellij-IDEA使用问题" class="headerlink" title="九、intellij-IDEA使用问题"></a>九、intellij-IDEA使用问题</h1><pre><code>1、intellij-IDEA创建web项目后，无法访问index.jsp</code></pre><p><img src="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/question-00.png" alt="question-00"><br>    2、针对spring boot项目导入后没有application图标<br><font color="#FF0000">第一种方法</font><br>    检查看到没有target文件夹 不知道跟这个有没有关系，<br>    既然没有target文件夹，我就去看了下maven，<br>    结果在右侧Maven Projects没发现该项目，猜测可能是没检测到该项目<br>    在Maven Projects点击+号，选中该项目的pom,xml， 右下角出现检测，成功。</p>
+<p><font color="#FF0000">第二种方法</font><br>    在Maven Projects点击+号，选中该项目的pom,xml， 右下角出现检测，<br>    点击Build &gt;&gt; Rebulid Project<br>    生成了target目录和文件<br>    成功</p>
+
       
 
       
