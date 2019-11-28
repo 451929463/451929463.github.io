@@ -17,7 +17,9 @@
 <meta property="og:description" content="一、git的常用基础命令1、下载资源https:&#x2F;&#x2F;git-scm.com&#x2F;downloads ，安装  “下一步” 即可; 2、配置用户名及邮箱;     ![gitBase](git基本配置使用入门&#x2F;git-00.png)     安装完成后，打开gitBase:        $git config --global user.name &amp;quot;自定义名字&amp;quot;        $">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8&#x2F;git-01.png">
-<meta property="og:updated_time" content="2019-11-28T08:49:35.796Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8&#x2F;git-02.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8&#x2F;git-03.jpg">
+<meta property="og:updated_time" content="2019-11-28T09:07:49.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8&#x2F;git-01.png">
   
@@ -221,12 +223,8 @@
 ==若不提交后面会有冲突！！！==</code></pre><hr>
 <h1 id="二、远程仓库配置"><a href="#二、远程仓库配置" class="headerlink" title="二、远程仓库配置"></a>二、远程仓库配置</h1><pre><code>1、生成信任账号
          $ ssh-keygen -t rsa -C &quot;配置的邮箱&quot;
-    生成的账号会在ssh文件夹中
-    ![密钥](git基本配置使用入门/git-02.jpg)
-    copy内容到github配置下
-    ![github](git基本配置使用入门/git-03.jpg)
-
-2、关联远程仓库
+    生成的账号会在ssh文件夹中</code></pre><p><img src="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git-02.jpg" alt="密钥"><br>        copy内容到github配置下<br><img src="/2019/11/28/git%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/git-03.jpg" alt="github"></p>
+<pre><code>2、关联远程仓库
     git remote add origin git@server-name:path/repo-name.git
     path:指github上每一个具体仓库地址
 
