@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>ES6-快速入门 | 请宝贝转身</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES6:javaScript语言第6版；我对前端语言的拙见:个人觉得js语言正在摒弃弱语言；一、新引入的let\consf和var的区别？    **在ES6之前，js语法从空间上讲只有全局变量和局部变量。    *而局部变量的实现：只是将变量放在函数里定义。    **存在的问题：当定义变量过多时，可能会定义重名变量，而且可能还会互相干扰。">
+  <meta name="description" content="ES6:javaScript语言第6版；我对前端语言的拙见:个人觉得js语言正在摒弃弱语言； 一、新引入的let\consf和var的区别？***在ES6之前，js语法从空间上讲只有全局变量和局部变量。 **而局部变量的实现：只是将变量放在函数里定义。 **存在的问题：当定义变量过多时，可能会定义重名变量，而且可能还会互相干扰。">
 <meta name="keywords" content="前端语法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6-快速入门">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;index.html">
 <meta property="og:site_name" content="请宝贝转身">
-<meta property="og:description" content="ES6:javaScript语言第6版；我对前端语言的拙见:个人觉得js语言正在摒弃弱语言；一、新引入的let\consf和var的区别？    **在ES6之前，js语法从空间上讲只有全局变量和局部变量。    *而局部变量的实现：只是将变量放在函数里定义。    **存在的问题：当定义变量过多时，可能会定义重名变量，而且可能还会互相干扰。">
+<meta property="og:description" content="ES6:javaScript语言第6版；我对前端语言的拙见:个人觉得js语言正在摒弃弱语言； 一、新引入的let\consf和var的区别？***在ES6之前，js语法从空间上讲只有全局变量和局部变量。 **而局部变量的实现：只是将变量放在函数里定义。 **存在的问题：当定义变量过多时，可能会定义重名变量，而且可能还会互相干扰。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-00.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-01.png">
@@ -22,7 +22,19 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-03.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-04.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-05.png">
-<meta property="og:updated_time" content="2019-11-28T16:39:08.534Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-06.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-07.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-08.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-09.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-10.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-11.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-12.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-13.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-14.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-15.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-16.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-17.png">
+<meta property="og:updated_time" content="2019-11-29T12:52:15.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8&#x2F;es-00.png">
   
@@ -179,7 +191,7 @@
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1、let是局部变量，只限于当前代码块"><span class="toc-number">1.</span> <span class="toc-text">1、let是局部变量，只限于当前代码块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、-变量作用域不会被提升。"><span class="toc-number">2.</span> <span class="toc-text">2、 变量作用域不会被提升。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3、相同作用域下let-不能重复定义变量名相同的参数。"><span class="toc-number">3.</span> <span class="toc-text"> 3、相同作用域下let 不能重复定义变量名相同的参数。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4、let的父子作用域"><span class="toc-number">4.</span> <span class="toc-text"> 4、let的父子作用域</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5、const的特点"><span class="toc-number">5.</span> <span class="toc-text"> 5、const的特点</span></a></li></ol>
+			   <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、新引入的let-consf和var的区别？"><span class="toc-number">1.</span> <span class="toc-text">一、新引入的let\consf和var的区别？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、ES6之新增结构解析"><span class="toc-number">2.</span> <span class="toc-text">二、ES6之新增结构解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、ES6之Set集合"><span class="toc-number">3.</span> <span class="toc-text">三、ES6之Set集合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、ES6之Map"><span class="toc-number">4.</span> <span class="toc-text">四、ES6之Map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、ES6值symbol命名冲突问题"><span class="toc-number">5.</span> <span class="toc-text">五、ES6值symbol命名冲突问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、ES6之新增语法Class"><span class="toc-number">6.</span> <span class="toc-text">六、ES6之新增语法Class</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、ES6之小彩球效果"><span class="toc-number">7.</span> <span class="toc-text">七、ES6之小彩球效果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、ES6新特性"><span class="toc-number">8.</span> <span class="toc-text">八、ES6新特性</span></a></li></ol>
 			 </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -199,17 +211,212 @@
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ES6:javaScript语言第6版；<br>我对前端语言的拙见:个人觉得js语言正在摒弃弱语言；<br>一、新引入的let\consf和var的区别？<br>    **<em>在ES6之前，js语法从空间上讲只有全局变量和局部变量。<br>    *</em>而局部变量的实现：只是将变量放在函数里定义。<br>    **存在的问题：当定义变量过多时，可能会定义重名变量，而且可能还会互相干扰。</p>
-<a id="more"></a>
-<h1 id="1、let是局部变量，只限于当前代码块"><a href="#1、let是局部变量，只限于当前代码块" class="headerlink" title="1、let是局部变量，只限于当前代码块"></a><font color="#F0000">1、let是局部变量，只限于当前代码块</font></h1><p><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-00.png" alt="es-01"></p>
-<h1 id="2、-变量作用域不会被提升。"><a href="#2、-变量作用域不会被提升。" class="headerlink" title="2、 变量作用域不会被提升。"></a><font color="#F0000">2、 变量作用域不会被提升。</font></h1><p>若果是var定义的变量，你在var之前打印，js会全局查找，会将<br>Var a = “123”;解析位  var a ;  console.log(a); a = “123”。所以会报undefined.<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-01.png" alt="es-02"></p>
-<h1 id="3、相同作用域下let-不能重复定义变量名相同的参数。"><a href="#3、相同作用域下let-不能重复定义变量名相同的参数。" class="headerlink" title=" 3、相同作用域下let 不能重复定义变量名相同的参数。"></a><font color="#F0000"> 3、相同作用域下let 不能重复定义变量名相同的参数。</font></h1><p><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-02.png" alt="es-03"></p>
-<h1 id="4、let的父子作用域"><a href="#4、let的父子作用域" class="headerlink" title=" 4、let的父子作用域"></a><font color="#F0000"> 4、let的父子作用域</font></h1><p><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-03.png" alt="es-04"><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-04.png" alt="es-05"><br>        使用let,弹框中的i访问的是btns[i],而btns[i]访问的是for(i)循环中的i;<br>        但是使用var，弹框中的i访问的是for(i）循环完之后的i<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-05.png" alt="es-06">        </p>
-<h1 id="5、const的特点"><a href="#5、const的特点" class="headerlink" title=" 5、const的特点"></a><font color="#F0000"> 5、const的特点</font></h1><pre><code>const  用来申明常量，对于基本数据类型不可修改，但是可以修改引用数据类型。
-而且与let的前三条特点一样。但是还有一个不一样的特点：
-就是const声明必须初始化：
-    const a = 123; //没问题
-    const a ; a = 456;//报错</code></pre>
+        <p>ES6:javaScript语言第6版；<br>我对前端语言的拙见:个人觉得js语言正在摒弃弱语言；</p>
+<h1 id="一、新引入的let-consf和var的区别？"><a href="#一、新引入的let-consf和var的区别？" class="headerlink" title="一、新引入的let\consf和var的区别？"></a>一、新引入的let\consf和var的区别？</h1><pre><code>***在ES6之前，js语法从空间上讲只有全局变量和局部变量。
+**而局部变量的实现：只是将变量放在函数里定义。
+**存在的问题：当定义变量过多时，可能会定义重名变量，而且可能还会互相干扰。</code></pre><a id="more"></a>
+<p><font color="#F0000">1、let是局部变量，只限于当前代码块</font><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-00.png" alt="es-01"></p>
+<p><font color="#F0000">2、 变量作用域不会被提升。</font><br>若果是var定义的变量，你在var之前打印，js会全局查找，会将<br>Var a = “123”;解析位  var a ;  console.log(a); a = “123”。所以会报undefined.<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-01.png" alt="es-02"></p>
+<p><font color="#F0000"> 3、相同作用域下let 不能重复定义变量名相同的参数。</font><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-02.png" alt="es-03"></p>
+<p><font color="#F0000"> 4、let的父子作用域</font><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-03.png" alt="es-04"><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-04.png" alt="es-05"><br>        使用let,弹框中的i访问的是btns[i],而btns[i]访问的是for(i)循环中的i;<br>        但是使用var，弹框中的i访问的是for(i）循环完之后的i<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-05.png" alt="es-06"><br><font color="#F0000"> 5、const的特点</font><br>        const  用来申明常量，对于基本数据类型不可修改，但是可以修改引用数据类型。<br>        而且与let的前三条特点一样。但是还有一个不一样的特点：<br>        就是const声明必须初始化：<br>            const a = 123; //没问题<br>            const a ; a = 456;//报错</p>
+<h1 id="二、ES6之新增结构解析"><a href="#二、ES6之新增结构解析" class="headerlink" title="二、ES6之新增结构解析"></a>二、ES6之新增结构解析</h1><p><font color="#FF0000">结构赋值：</font><br>    1、基本赋值，都能打印出相应的值。<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-06.png" alt="es-07"><br>    2、对象赋值<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-07.png" alt="es-08"><br>    3、模板赋值<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-08.png" alt="es-09"><br>    4、数组赋值<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-09.png" alt="es-10"><br>    5、机构解析<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-10.png" alt="es-11"><br>但是，如果 let [a,b,c,d,e,f] = 123456；会报错。因为number类型没有构造器不能解析。</p>
+<h1 id="三、ES6之Set集合"><a href="#三、ES6之Set集合" class="headerlink" title="三、ES6之Set集合"></a>三、ES6之Set集合</h1><p><font size="6" color="#FF0080">Es6中set类似于数组</font></p>
+<pre><code>1、定义一个Set集合。 set集合的特点 元素唯一</code></pre><p><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-11.png" alt="es-12"><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-12.png" alt="es-13"><br>  set.size  是set的属性。set会自动剔除重复数据</p>
+<pre><code>2、4个方法</code></pre><p><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-13.png" alt="es-14"> </p>
+<h1 id="四、ES6之Map"><a href="#四、ES6之Map" class="headerlink" title="四、ES6之Map"></a>四、ES6之Map</h1><p><font size="6" color="#FF0080">Map相对于js中的对象更加完善，类似于对象，但实际还是key-value</font></p>
+<p>ES6中Obeject的缺陷：<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-14.png" alt="es-15"><br>    1、新建Map，及map的常用方法<br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-15.png" alt="es-16"><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-16.png" alt="es-17"><br>    ①、console.log(map.keys()); //获取所有的key<br>    ②、console.log(map.values());//获取所有的value<br>    ③、console.log(map.entries());//获取所有的key和value<br>    ④、map.forEach(function(index,value){ //遍历map<br>        console.log(index+”:”+value);<br>    });</p>
+<h1 id="五、ES6值symbol命名冲突问题"><a href="#五、ES6值symbol命名冲突问题" class="headerlink" title="五、ES6值symbol命名冲突问题"></a>五、ES6值symbol命名冲突问题</h1><p><font color="red">ES6之前，js的的数据类型有6种：undefind、null、object、String 、number 、boolean;<br>    但是ES6新增第七种symbol;</font></p>
+<pre><code>1、定义Symbol，用symbol定义的变量名就是唯一的
+let name = &quot;张三&quot;;//普通定义一个变量
+let age = Symbol();//不需要使用new，直接使用symbol函数生成。
+
+2、描述</code></pre><p><font color="red">Symbol(“xxx”):xxx是对Symbol的描述，可以在console中看到</font><br>    let sex1 = Symbol(“man”);<br>    let sex2 = Symbol(“woman”);<br>    console.log(sex1);//这里打印的只是一个标记符man</p>
+<pre><code>情况1：
+    let sex3 = Symbol(&quot;man&quot;);
+    console.log(sex1==sex3); 
+    //false </code></pre><p><font color="red">不管标记符是否一样，每个symbol都是一个单独的标记;</font></p>
+<pre><code>3、使用场景</code></pre><p><font color="red">一般作为对象的属性使用</font> </p>
+<pre><code>let obj = {}; 
+obj[Symbol(&quot;name&quot;)] = &quot;zs&quot;;
+obj[Symbol(&quot;name&quot;)] = &quot;ls&quot;;
+console.log(obj);//zs,ls</code></pre><h1 id="六、ES6之新增语法Class"><a href="#六、ES6之新增语法Class" class="headerlink" title="六、ES6之新增语法Class"></a>六、ES6之新增语法Class</h1><pre><code>1、js面向对象,声明一个类
+    function User(name , age){
+        this.name = name ;
+        this.age = age ;
+    }
+    //为这个类配置原型
+    User.prototype = {
+        constructor:User,//此处是逗号
+        print(){
+            console.log(this.name+&quot;&gt;&gt;&gt;&gt;&gt;&gt;&quot;);
+        }
+    }
+    //新建类、调用方法
+    var u = new User(&quot;zs&quot;,123);
+    console.log(u);
+    u.print();
+
+
+2、ES6声明一个类
+    class Person{
+        //构造方法
+        constructor(name,age){
+            this.name = name ;
+            this.age = age;
+        }
+        //类方法 等同于之前的原型
+        show(){
+            console.log(this.name+&quot;&gt;&gt;&gt;&gt;&quot;+this.age);
+        }
+    }
+    // new 一个Person对象
+    let p = new Person(&quot;zs&quot;,12);
+    p.show();</code></pre><h1 id="七、ES6之小彩球效果"><a href="#七、ES6之小彩球效果" class="headerlink" title="七、ES6之小彩球效果"></a>七、ES6之小彩球效果</h1><pre><code>//制作小彩球
+&lt;canvas id=&quot;canvas&quot;&gt;我很好&lt;/canvas&gt;//画布
+&lt;script src=&quot;js/underScore.js&quot;&gt;&lt;/script&gt;//引入js
+&lt;script&gt;
+    //获取画布
+    const canvas = document.getElementById(&quot;canvas&quot;);
+    //将画布设置为2D
+    const ctx = canvas.getContext(&quot;2d&quot;);
+    //设置模板大小、背景颜色
+    canvas.width = 1000;
+    canvas.height = 600;
+    canvas.style.backgroundColor = &quot;#000&quot;;
+
+    //小球对象
+    class Ball{
+        constructor(x,y,colorBall){
+            this.x = x ;
+            this.y = y ;
+            this.colorBall = colorBall ;
+            this.r = 40 ;
+        }
+
+        //绘制小球
+        render(){
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(this.x , this.y , this.r , 0 , Math.PI*2);
+            ctx.fillStyle=this.colorBall;
+            ctx.fill();
+            ctx.restore();
+        }
+    }
+
+    //移动小球
+    class MoveBall extends Ball{
+        constructor(x,y,color){
+            super(x,y,color);
+            this.dx = _.random(-5,5);
+            this.dy = _.random(-5,5);
+            this.dr = _.random(1,3);
+        }
+        //在移动的过程中缩小
+        upDate(){
+            this.x += this.dx ;
+            this.y += this.dy ;
+            this.r -= this.dr ;
+            if(this.r &lt; 0){
+                this.r = 0;
+            }
+        }
+    }
+
+    let ballArr = [];
+    let colorArr = [&quot;red&quot;,&quot;yellow&quot;,&quot;orange&quot;];
+    //监听鼠标移动并在当前位置生产小球生产小球
+    canvas.addEventListener(&apos;mousemove&apos;,function(e){
+        ballArr.push(new MoveBall(e.offsetX ,e.offsetY ,colorArr[_.random(0,colorArr.length - 1)]));
+    });
+    //定时任务 绘画小球到画布，并缩小
+    setInterval(function(){
+        //清空画布上的小球移动轨迹
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        //遍历小球数组并
+        for(let i = 0 ; i &lt; ballArr.length ; i++){
+            ballArr[i].render();
+            ballArr[i].upDate();
+        }
+    },50);</code></pre><h1 id="八、ES6新特性"><a href="#八、ES6新特性" class="headerlink" title="八、ES6新特性"></a>八、ES6新特性</h1><pre><code>1、Array新增方法</code></pre><p><font color="red"><strong><em>Array.from();===将集合转化为数组</em></strong></font><br><img src="/2019/11/28/ES6-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/es-17.png" alt="es-18"><br>    var btns = document.getElementsByTagName(“button”);<br>        console.log(btns);//集合上<br>        console.log(Array.from(btns));//数组下</p>
+<p><font color="red"><strong>*    Array.of();===将零散值合并为数组*</strong></font><br>    let arr = Array.of(1,2,3,4,5);<br>    console.log(arr);//{1,2,3,4,5}</p>
+<pre><code>2、Object新增方法：</code></pre><p><font color="red">let obj1 = {};===属性和赋值相同可以省略</font><br>    //对象里k,v 名称相同时可以默认不写</p>
+<pre><code>let name = &apos;ls&apos;;
+let age =24;
+let obj1 = {
+    name,//等同于name:name,age=age
+    age
+}
+console.log(obj1);</code></pre><p><font color="red">Object.assign(obj…);===合并对象，相同属性会覆盖</font>、</p>
+<pre><code>        let obj = {name:&apos;zs&apos;};
+        let obj1 = {age:&apos;15&apos;};
+        let obj2 = {sex:&apos;man&apos;};
+        let obj3 = {hobby:&apos;ball&apos;};
+        let obj4 = {address:&apos;wuhan&apos;};
+        //assign  合并对象，相同属性会覆盖
+        console.log(Object.assign(obj,obj1));
+
+3、模板字符串：确定好模板可以冲外部引入值
+/*let html = &apos;&lt;html&gt;&lt;head&gt;123&lt;/head&gt;&lt;body&gt;456&lt;/body&gt;&lt;/html&gt;&apos;;*/
+    let name = &apos;zs&apos;;
+    let age = 19;
+        let html1 = `&lt;html&gt;
+                    &lt;head&gt;${name}&lt;/head&gt;
+                    &lt;body&gt;${age}&lt;/body&gt;
+                 &lt;/html&gt;`;
+//console.log(html);
+  console.log(html1);
+
+ 4、ES6函数的箭头语法：
+//箭头函数 语法： ()=&gt;{} 特点：this指向更符合需求
+一般来说，this总是指向调用某个方法的对象，但是使用call()和apply()方法时，就会改变this的指向。
+    function test(){
+        setTimeout(function(){
+            console.log(&quot;&gt;&gt;&gt;&quot;+this);//window
+        },1000);
+        setTimeout(()=&gt;{
+            console.log(&quot;&gt;&gt;&gt;&quot;+this);//Object
+        },1000);
+    }
+    var obj ={};
+    test.call(obj);//希望全部指向 obj
+
+5、ES6中函数的形参默认值：</code></pre><p><font color="red">①形参无默认值函数</font></p>
+<pre><code>function sum(n1,n2){
+    console.log(n1+n2);
+}
+sum(1,2);//3
+sum();// NaN</code></pre><p><font color="red">②ES6之前定义形参的默认值</font>        </p>
+<pre><code>function sum1(n10,n20){
+    n10 = n10 || 10;
+    n20 = n20 || 20;
+    console.log(n10+n20);
+}
+sum1(1,2);//3
+sum1();// 30</code></pre><p><font color="red">③ES6定义函数默认值</font></p>
+<pre><code>function sum1(n10 = 5,n20 = 10){
+    console.log(n10+n20);
+}
+sum1(1,2);//3
+sum1();// 15</code></pre><p><font color="red">④函数形参延迟操作</font>        </p>
+<pre><code>function sum(){
+    let result = 0 ;
+    for (let value of arguments){ //判断参数
+        result += value ;
+    }
+    return result ;
+}
+console.log(sum(10,20,30));//60</code></pre><p><font color="red">⑤//ES6 能自动识别参数类型，进行模板赋值。</font>            </p>
+<pre><code>function sum1(name,age,...num){
+    console.log(name);//zs
+    console.log(age);//18
+    let result = 0 ;
+    for(let n of num){
+        result += n ;
+    }
+    return result ;
+}
+console.log(sum1(&apos;zs&apos;,18,20,30,40));//90</code></pre>
       
 
       
@@ -323,6 +530,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/11/29/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue学习笔记
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/11/28/intellij-idea%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">intellij idea配置使用</div>
@@ -352,7 +568,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1、let是局部变量，只限于当前代码块"><span class="toc-number">1.</span> <span class="toc-text">1、let是局部变量，只限于当前代码块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、-变量作用域不会被提升。"><span class="toc-number">2.</span> <span class="toc-text">2、 变量作用域不会被提升。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3、相同作用域下let-不能重复定义变量名相同的参数。"><span class="toc-number">3.</span> <span class="toc-text"> 3、相同作用域下let 不能重复定义变量名相同的参数。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4、let的父子作用域"><span class="toc-number">4.</span> <span class="toc-text"> 4、let的父子作用域</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5、const的特点"><span class="toc-number">5.</span> <span class="toc-text"> 5、const的特点</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、新引入的let-consf和var的区别？"><span class="toc-number">1.</span> <span class="toc-text">一、新引入的let\consf和var的区别？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、ES6之新增结构解析"><span class="toc-number">2.</span> <span class="toc-text">二、ES6之新增结构解析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、ES6之Set集合"><span class="toc-number">3.</span> <span class="toc-text">三、ES6之Set集合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、ES6之Map"><span class="toc-number">4.</span> <span class="toc-text">四、ES6之Map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、ES6值symbol命名冲突问题"><span class="toc-number">5.</span> <span class="toc-text">五、ES6值symbol命名冲突问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、ES6之新增语法Class"><span class="toc-number">6.</span> <span class="toc-text">六、ES6之新增语法Class</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、ES6之小彩球效果"><span class="toc-number">7.</span> <span class="toc-text">七、ES6之小彩球效果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、ES6新特性"><span class="toc-number">8.</span> <span class="toc-text">八、ES6新特性</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -473,6 +689,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">开发工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">前端、前端框架、vue</a>
               </li>
             
             <div class="clearfix"></div>
